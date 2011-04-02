@@ -1,3 +1,9 @@
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin//virtualenvwrapper.sh
+source /usr/local/share/python//virtualenvwrapper.sh
 export VIRTUALENV_USE_DISTRIBUTE="1"
+
+
+function cd(){
+    builtin cd "$@"
+    $(/Users/kreitz/.oh-my-zsh/tools/workon.py)
+}
