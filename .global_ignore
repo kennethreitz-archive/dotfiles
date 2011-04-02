@@ -1,0 +1,71 @@
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#django 
+*.log
+*.pot
+local_settings.py
+
+#osx
+
+.DS_Store?
+Icon?
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+#vim 
+*.swp
+*.swo
+
+#tm
+*.tmproj
+*.tmproject
+tmtags
+
+#eclipse 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# CDT-specific
+.cproject
+
+
+# Ignore tags created by etags and ctags
+TAGS
+tags
+

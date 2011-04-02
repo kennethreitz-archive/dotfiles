@@ -1,0 +1,17 @@
+[user]
+	email = me@kennethreitz.com
+	name = Kenneth Reitz
+[github]
+	user = kennethreitz
+	token = xxxxxxxxxxxxxxxxxxx
+[core]
+	excludesfile = /Users/kreitz/.global_ignore
+	quotepath = false
+[alias]
+	update = !gx-update
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
