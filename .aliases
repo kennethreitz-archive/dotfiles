@@ -9,7 +9,7 @@ alias dmesg="sudo dmesg"
 alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
 alias ls='ls -G'
 alias lime='lime -n'
-
+alias scratchdisk='diskutil erasevolume HFS+ "Scratch" `hdiutil attach -nomount ram://16384000`'
 
 function datedir(){
     mkdir `date '+%Y-%m-%d'`
