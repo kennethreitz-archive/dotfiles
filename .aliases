@@ -1,0 +1,31 @@
+alias youtube='youtube-dl -t'
+alias serve='python -m SimpleHTTPServer'
+alias sfab='fab -f ~/.sfab/fabfile.py'
+alias top='htop'
+alias svnscrub='find . -name .svn -exec rm -rf {} \;'
+alias ports='sudo lsof -i -P | grep -i "listen"'
+alias dnsflush='dscacheutil -flushcache'
+alias dmesg="sudo dmesg"
+alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
+alias ls='ls -G'
+alias lime='lime -n'
+
+
+function datedir(){
+    mkdir `date '+%Y-%m-%d'`
+}
+
+function git(){hub "$@"}
+
+wiki() {
+        dig +short txt $1.wp.dg.cx
+    }
+    
+function gh-get () {
+  curl -#O $(echo $1 | sed 's|blob|raw|')
+}
+
+
+function mk (){ mkvirtualenv --no-site-packages -p $( which $1) $2}
+
+
