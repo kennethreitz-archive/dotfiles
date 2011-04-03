@@ -29,4 +29,6 @@ function gh-get () {
 
 function mk (){ mkvirtualenv --no-site-packages -p $( which $1) $2}
 
-
+beep() {
+    echo -n '\a'
+}
