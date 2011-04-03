@@ -9,6 +9,7 @@
 	quotepath = false
 [alias]
 	update = !gx-update
+	issues = gh issues open
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
