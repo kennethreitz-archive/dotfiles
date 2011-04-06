@@ -12,6 +12,10 @@ alias lime='lime -n'
 alias scratchdisk='diskutil erasevolume HFS+ "Scratch" `hdiutil attach -nomount ram://16384000`'
 alias mate='lime -n'
 
+function sshuttle(){
+    /usr/local/sshuttle/sshuttle -r $1 0.0.0.0/0 -vv
+}
+
 function datedir(){
     mkdir `date '+%Y-%m-%d'`
 }
