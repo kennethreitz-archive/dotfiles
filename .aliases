@@ -33,6 +33,19 @@ function gh-get () {
 
 function mk (){ mkvirtualenv --no-site-packages -p $( which $1) $2}
 
+
 beep() {
     echo -n '\a'
+}
+
+
+function tabc {
+  NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
+  osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
+}
+
+function ssh {
+  tabc "Solarized Dark"
+  /usr/bin/ssh "$@"
+  tabc "Visor"
 }
