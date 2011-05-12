@@ -10,7 +10,10 @@ alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/py
 alias ls='ls -G'
 alias lime='lime -n'
 alias scratchdisk='diskutil erasevolume HFS+ "Scratch" `hdiutil attach -nomount ram://16384000`'
+alias gitx='gitx -c'
 alias mate='lime -n'
+alias krup='python setup.py register -r krpip sdist upload -r krpip'
+alias krpip='pip install -i http://krpip.ep.io/simple'
 
 function sshuttle(){
     /usr/local/sshuttle/sshuttle -r $1 0.0.0.0/0 -vv
@@ -18,6 +21,11 @@ function sshuttle(){
 
 function datedir(){
     mkdir `date '+%Y-%m-%d'`
+}
+
+function get_defaults(){
+
+  find $1 -type f -exec strings {} \; | awk '/^values.[^ ]+$/ { sub("values.", ""); print }'
 }
 
 function git(){hub "$@"}
