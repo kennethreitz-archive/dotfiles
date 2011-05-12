@@ -13,7 +13,7 @@ def pyc():
     local('rm -fr dist build')
     local("find . -name \"*.pyc\" -exec rm '{}' ';'")
 
-    
+
 def pip():
     """Remove pip build cache.
     """
@@ -28,16 +28,16 @@ def trash():
 
 def backup(what):
     if what == 'music':
-        os.system('rsync -av ~/Music/FLAC ~/Shares/music/')
-        
+        os.system('rsync -av ~/Music/FLAC ~/shares/music/')
+
     elif what == 'photos':
-        os.system('rsync -av ~/Pictures/2011 ~/Shares/photos/shoots')
-        
+        os.system('rsync -av ~/Pictures/2011 ~/shares/photos/shoots')
+
     elif what == 'repos':
 
         REPO_DIR = '/Users/kreitz/repos'
         BACKUP_DIR = REPO_DIR + '/backups'
-        DESTINATION = '~/Shares/photos/shoots'
+        DESTINATION = '~/shares/photos/shoots'
 
         DATE = '-'.join([str(x) for x in datetime.now().isocalendar()])
 
@@ -59,13 +59,13 @@ def backup(what):
 
         os.system('mkdir -p {0}'.format(BACKUP_DIR))
         os.system('mkdir -p {0}/{1}'.format(BACKUP_DIR, DATE))
-        
+
 
         puts(colored.green('Creating backups.'))
 
 
         for repo in repos:
-            
+
             orig_path = os.path.abspath(os.path.curdir)
             os.chdir(os.path.abspath(repo))
 
