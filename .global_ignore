@@ -18,7 +18,7 @@ pip-log.txt
 .coverage
 .tox
 
-#django 
+#django
 *.log
 *.pot
 local_settings.py
@@ -36,7 +36,7 @@ Icon?
 .Spotlight-V100
 .Trashes
 
-#vim 
+#vim
 *.swp
 *.swo
 
@@ -45,7 +45,7 @@ Icon?
 *.tmproject
 tmtags
 
-#eclipse 
+#eclipse
 *.pydevproject
 .project
 .metadata
@@ -60,6 +60,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.idea
 
 # CDT-specific
 .cproject
