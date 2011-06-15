@@ -21,7 +21,7 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/Cellar/ruby/1.9.2-p136/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin:/Users/kreitz/.gem/ruby/1.8/bin:/Users/kreitz/.cabal/bin/:/usr/local/pdftex/texk/web2c/:/usr/local/share/npm/bin/:/usr/local/share/python/
+export PATH=/usr/local/Cellar/ruby/1.9.2-p180/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin:/Users/kreitz/.gem/ruby/1.8/bin:/Users/kreitz/.cabal/bin/:/usr/local/pdftex/texk/web2c/:/usr/local/share/npm/bin/:/usr/local/share/python/
 
 export PYTHONPATH=/usr/local/lib/python
 export GHSYNC_DIR=~/repos/
