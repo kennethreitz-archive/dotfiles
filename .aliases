@@ -14,12 +14,30 @@ alias gitx='gitx -c'
 alias mate='lime -n'
 alias krup='python setup.py register -r krpip sdist upload -r krpip'
 alias krpip='pip install -i http://krpip.ep.io/simple'
+alias vim="/usr/local/bin/mvim -v"
 
+alias muffin='ssh bessie@muffin.local'
+alias zum='ssh root@zumhosting.com'
+alias ssh-rdd='ssh -i ~/.ssh/readabilitykey.pem'
+alias ssh-kr='ssh -i ~/.ssh/kr.pem'
+
+
+function git(){
+  legit "$@"
+}
+
+function git-plane(){
+  codeplane repo:add $1
+  git remote set-url --add origin git@codeplane.com:kennethreitz/$1.git
+  git push --all
+  git push --tags
+}
 function sshuttle(){
-    /usr/local/sshuttle/sshuttle -r $1 0.0.0.0/0 -vv
+    /usr/local/bin/sshuttle -r $1 0.0.0.0/0 -vv
 }
 
 function datedir(){
+    echo `date '+%Y-%m-%d'`
     mkdir `date '+%Y-%m-%d'`
 }
 
@@ -28,7 +46,7 @@ function get_defaults(){
   find $1 -type f -exec strings {} \; | awk '/^values.[^ ]+$/ { sub("values.", ""); print }'
 }
 
-function git(){hub "$@"}
+
 
 wiki() {
         dig +short txt $1.wp.dg.cx
@@ -52,8 +70,13 @@ function tabc {
   osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
 }
 
+
 function ssh {
   tabc "Solarized Dark"
   /usr/bin/ssh "$@"
   tabc "Visor"
 }
+
+# `google.com`
+function urlopen { open "http://$*" }
+alias -s com=urlopen
