@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 .oh-my-zsh/cache/Mac_applications
+=======
+locals.zsh
+log/.zsh_history
+projects.zsh
+custom/*
+!custom/example
+!custom/example.zsh
+cache
+*.swp
+>>>>>>> a738ca9b645c3cc53bdb01e8676202ceca449ccf
