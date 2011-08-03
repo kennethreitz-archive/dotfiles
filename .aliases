@@ -57,7 +57,10 @@ function gh-get () {
 }
 
 
-function mk (){ mkvirtualenv --no-site-packages -p $( which $1) $2}
+function mk (){
+  mkvirtualenv --no-site-packages -p $( which $1) $2
+  echo "/Users/kreitz/.virtualenvs/$2/" > .workon
+  }
 
 
 beep() {
@@ -71,12 +74,3 @@ function tabc {
 }
 
 
-function ssh {
-  tabc "Solarized Dark"
-  /usr/bin/ssh "$@"
-  tabc "Visor"
-}
-
-# `google.com`
-function urlopen { open "http://$*" }
-alias -s com=urlopen
