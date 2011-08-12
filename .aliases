@@ -3,6 +3,7 @@ alias serve='python -m SimpleHTTPServer'
 alias sfab='fab -f ~/.sfab/fabfile.py'
 alias top='htop'
 alias svnscrub='find . -name .svn -exec rm -rf {} \;'
+alias origscrub="find . -name '*.orig' -exec rm -rf {} \;"
 alias ports='sudo lsof -i -P | grep -i "listen"'
 alias dnsflush='dscacheutil -flushcache'
 alias dmesg="sudo dmesg"
