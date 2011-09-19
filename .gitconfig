@@ -3,16 +3,40 @@
 	name = Kenneth Reitz
 [github]
 	user = kennethreitz
-	token = xxxxxxxxxxxxxxxxxxx
 [core]
 	excludesfile = /Users/kreitz/.global_ignore
 	quotepath = false
 [alias]
 	update = !gx-update
 	issues = gh issues open
+
+    branches = !legit branches
+    br = !legit branches
+    graft = !legit graft "$@"
+    harvest = !legit harvest "$@"
+    publish = !legit publish "$@"
+    unpublish = !legit unpublish "$@"
+    sprout = !legit sprout "$@"
+    sync = !legit sync
+    switch = !legit switch "$@"
+    i = add -p
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+[merge]
+    keepBackup = false
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[color]
+    ui = auto
+	interactive = auto
+[rerere]
+	enabled = 1
