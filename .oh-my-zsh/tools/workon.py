@@ -20,10 +20,28 @@ def find_above(*names):
 
 if __name__ == '__main__':
 
+    # Is there a .workon file?
     wo_file = find_above('.workon')
-    if wo_file and not 'VIRTUAL_ENV' in os.environ.keys():
-        with open(wo_file) as f:
-            print('source {0}/bin/activate'.format(f.readlines()[0]))
 
-    elif not wo_file and 'VIRTUAL_ENV' in os.environ.keys():
-        print('deactivate')
+    # If there is, and we're not already in a virtualenv.
+    if wo_file and not 'VIRTUAL_ENV' in os.environ:
+        with open(wo_file) as f:
+
+            # Grab the venv path
+            venv_path = f.readlines()[0].strip()
+
+            # Activate!
+            print('source {0}/bin/activate'.format(venv_path))
+
+            # Mark it as ours.
+            print('export AUTOVIRTUALENV')
+
+    # If there's no file, bur we're in a virtualenv...
+    elif (not wo_file) and ('VIRTUAL_ENV' in os.environ.keys()):
+
+        # ... and if it's ours.
+        if 'AUTOVIRTUALENV' in os.environ:
+
+            # Deactivate the env.
+            print('deactivate')
+            print('unset AUTOVIRTUALENV')
