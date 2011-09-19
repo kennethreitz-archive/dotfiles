@@ -22,9 +22,6 @@ alias zum='ssh root@zumhosting.com'
 alias ssh-rdd='ssh -i ~/.ssh/readabilitykey.pem'
 alias ssh-kr='ssh -i ~/.ssh/kr.pem'
 
-
-function git(){
-  legit "$@"
 }
 
 function git-plane(){
