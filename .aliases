@@ -22,9 +22,6 @@ alias zum='ssh root@zumhosting.com'
 alias ssh-rdd='ssh -i ~/.ssh/readabilitykey.pem'
 alias ssh-kr='ssh -i ~/.ssh/kr.pem'
 
-
-alias site-packages='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"'
-
 function site-packages (){
   $( which $1) -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
 }
