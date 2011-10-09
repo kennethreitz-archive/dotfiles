@@ -23,7 +23,21 @@ alias ssh-rdd='ssh -i ~/.ssh/readabilitykey.pem'
 alias ssh-kr='ssh -i ~/.ssh/kr.pem'
 
 
-alias packages='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"'
+alias site-packages='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"'
+
+function site-packages (){
+  $( which $1) -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+}
+
+function mk (){
+  mkvirtualenv --no-site-packages -p $( which $1) $2
+  echo "/Users/kreitz/.virtualenvs/$2/" > .workon
+}
+
+function mktmp (){
+  mktmpenv --no-site-packages -p $( which $1) $2
+  echo "/Users/kreitz/.virtualenvs/$2/" > .workon
+}
 
 }
 
@@ -57,11 +71,6 @@ function gh-get () {
   curl -#O $(echo $1 | sed 's|blob|raw|')
 }
 
-
-function mk (){
-  mkvirtualenv --no-site-packages -p $( which $1) $2
-  echo "/Users/kreitz/.virtualenvs/$2/" > .workon
-  }
 
 
 beep() {
