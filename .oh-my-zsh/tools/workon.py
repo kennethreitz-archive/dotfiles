@@ -3,7 +3,7 @@
 
 
 import os
-import sys
+
 
 def find_above(*names):
     """Attempt to locate a .workon file by searching parent dirs."""
