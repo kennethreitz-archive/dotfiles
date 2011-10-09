@@ -21,10 +21,11 @@ plugins=(git osx brew)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin:/Users/kreitz/.gem/ruby/1.8/bin:/Users/kreitz/.cabal/bin/:/usr/local/pdftex/texk/web2c/:/usr/local/share/npm/bin/:/usr/local/share/python/
+export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:/usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin:/Users/kreitz/.gem/ruby/1.8/bin:/Users/kreitz/.cabal/bin/:/usr/local/pdftex/texk/web2c/:/usr/local/share/npm/bin/:/usr/local/share/python/
 
 export PYTHONPATH=/usr/local/lib/python
 export GHSYNC_DIR=~/repos/
 
 export CONVORE_NAME='kennethreitz'
 export CONVORE_PASS='xxxxxxxxxxx'
+export MACOSX_DEPLOYMENT_TARGET=10.7
