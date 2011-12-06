@@ -35,11 +35,6 @@ function mktmp (){
   mktmpenv --no-site-packages -p $( which $1)
 }
 
-function mktmp (){
-  mktmpenv --no-site-packages -p $( which $1) $2
-  echo "/Users/kreitz/.virtualenvs/$2/" > .workon
-}
-
 function git-plane(){
   codeplane repo:add $1
   git remote set-url --add origin git@codeplane.com:kennethreitz/$1.git
