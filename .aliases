@@ -32,7 +32,7 @@ function mk (){
 }
 
 function mktmp (){
-  mktmpenv --no-site-packages -p $( which $1) $2
+  mktmpenv --no-site-packages -p $( which $1)
 }
 
 function mktmp (){
